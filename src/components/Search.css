@@ -1,0 +1,19 @@
+.not-found {
+  color: #dc3545 !important;
+  background-color: #fff !important;
+  border-color: #dc3545 #dc3545 #dc3545 #fff !important;
+  font-weight: bold !important;
+}
+
+#cityName {
+  border-right-color: transparent !important;
+}
+
+.searching-text {
+  padding: 0px 5px;
+}
+
+.found-location-text {
+  padding: 0px 5px;
+  font-weight: bold;
+}
