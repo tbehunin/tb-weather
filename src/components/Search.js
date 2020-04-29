@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { InputGroup, FormControl, Button, Card } from 'react-bootstrap';
 import api from '../utils/api';
 import './Search.css';
 
@@ -17,10 +17,9 @@ function Search({ onSearchResults }) {
   const notFound = (weatherData || {}).cod === "404";
   
   return (
-    <div>
+    <Card body>
       <InputGroup>
         <FormControl
-          id="cityName"
           laceholder="Enter location name"
           maxLength="25"
           isInvalid={notFound && !searching}
@@ -46,7 +45,7 @@ function Search({ onSearchResults }) {
           </InputGroup.Append>
         }
       </InputGroup>
-    </div>
+    </Card>
   );
 }
 
