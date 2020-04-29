@@ -20,7 +20,7 @@ function Search({ onSearchResults }) {
     <Card body>
       <InputGroup>
         <FormControl
-          laceholder="Enter location name"
+          placeholder="Enter a location"
           maxLength="25"
           isInvalid={notFound && !searching}
           onChange={e => debouncedCallback(e.target.value)}
@@ -36,7 +36,7 @@ function Search({ onSearchResults }) {
             {found && !searching &&
               <Button onClick={() => onSearchResults(weatherData)}>Found:
                 <span className="found-location-text">{weatherData.name}</span>
-                <i className="fas fa-arrow-right"></i>
+                <i className="fas fa-arrow-down"></i>
               </Button>
             }
             {notFound && !searching &&
